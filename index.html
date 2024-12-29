@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Box</title>
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-lexend">
+    <header class="sticky top-0 z-10">
+      <div class="bg-stone-100">
+        <div class="navbar w-11/12 mx-auto">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+            </div>
+            <a class="btn btn-ghost text-xl bg-green-300">Blog</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <a class="btn btn-ghost text-xl"
+              ><img src="/donate-icon.png" class="w-12 h-12" alt="" /> Donate
+              Box</a
+            >
+          </div>
+          <div class="navbar-end">
+            <div class="flex gap-1 justify-center items-center">
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        <button class="btn bg-green-300">Donation</button>
+        <button class="btn border-gray-400">History</button>
+      </div>
+    </header>
+    <main>
+      <div class="w-10/12 mx-auto">
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure class="w-1/2">
+            <img src="/july-foundation.jpg" alt="Album" />
+          </figure>
+          <div class="card-body w-1/2">
+            <div class="flex gap-1 items-center">
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+            </div>
+            <h2 class="card-title">July Shaheed Smriti Foundation</h2>
+            <p>
+              The July Shaheed Smrity Foundation has been set up to support the
+              injured and families of those who were affected by the July
+              revolution. With thousands injured and hundreds of lives lost, the
+              foundation will focus on raising funds to provide immediate health
+              care support to injured people, offer short-term financial support
+              to victim families, preserve the memory of those who sacrificed
+              their lives, and implement projects that will ensure long-term
+              impact.
+            </p>
+            <input
+              id="income"
+              type="number"
+              class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              placeholder="Enter Donation Amount"
+            />
+            <button class="btn btn-primary">Donate</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
