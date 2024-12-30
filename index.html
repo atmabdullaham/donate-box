@@ -53,7 +53,9 @@
           </div>
           <div class="navbar-end">
             <div class="flex gap-1 justify-center items-center">
-              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span id="balance"
+                >6000</span
+              >BDT
             </div>
           </div>
         </div>
@@ -72,7 +74,10 @@
           </figure>
           <div class="card-body w-1/2">
             <div class="flex gap-1 items-center">
-              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span
+                id="shahid-balance"
+                >70000</span
+              >BDT
             </div>
             <h2 class="card-title">July Shaheed Smriti Foundation</h2>
             <p>
@@ -86,12 +91,12 @@
               impact.
             </p>
             <input
-              id="income"
+              id="shahid-input"
               type="number"
               class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="Enter Donation Amount"
             />
-            <button class="btn btn-primary">Donate</button>
+            <button id="shahid-button" class="btn btn-primary">Donate</button>
           </div>
         </div>
         <!-- 2nd Donation -->
@@ -103,7 +108,10 @@
           <!-- text div -->
           <div class="card-body w-1/2">
             <div class="flex gap-1 items-center">
-              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span
+                id="gaza-balance"
+                >55000</span
+              >BDT
             </div>
             <h2 class="card-title">Donate To Help Gaza</h2>
             <p>
@@ -117,12 +125,12 @@
               impact.
             </p>
             <input
-              id="income"
+              id="gaza-input"
               type="number"
               class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="Enter Donation Amount"
             />
-            <button class="btn btn-primary">Donate</button>
+            <button id="gaza-button" class="btn btn-primary">Donate</button>
           </div>
         </div>
         <!-- 3rd Donation -->
@@ -132,7 +140,10 @@
           </figure>
           <div class="card-body w-1/2">
             <div class="flex gap-1 items-center">
-              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span
+                id="flood-balance"
+                >26000</span
+              >BDT
             </div>
             <h2 class="card-title">Donate To Help Flood Affected People</h2>
             <p>
@@ -146,22 +157,27 @@
               impact.
             </p>
             <input
-              id="income"
+              id="flood-input"
               type="number"
               class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="Enter Donation Amount"
             />
-            <button class="btn btn-primary">Donate</button>
+            <button id="flood-button" class="btn btn-primary">Donate</button>
           </div>
         </div>
         <!-- 4th Donation -->
-        <div class="card lg:card-side bg-base-300 shadow-xl">
+        <div
+          class="card lg:card-side bg-base-200 shadow-sm border-gray-300 border"
+        >
           <figure class="w-1/2 px-4 py-4">
             <img class="rounded-2xl" src="/cloth.png" alt="Album" />
           </figure>
           <div class="card-body w-1/2">
             <div class="flex gap-1 items-center">
-              <img class="w-8 h-8" src="/coin.png" alt="" /><span>6000</span>BDT
+              <img class="w-8 h-8" src="/coin.png" alt="" /><span
+                id="cloth-balance"
+                >15000</span
+              >BDT
             </div>
             <h2 class="card-title">Winter Cloth Distribution in Bangladesh</h2>
             <p>
@@ -175,15 +191,16 @@
               impact.
             </p>
             <input
-              id="income"
+              id="cloth-input"
               type="number"
               class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="Enter Donation Amount"
             />
-            <button class="btn btn-primary">Donate</button>
+            <button id="cloth-button" class="btn btn-primary">Donate</button>
           </div>
         </div>
       </div>
     </main>
+    <script src="/js/script.js"></script>
   </body>
 </html>
