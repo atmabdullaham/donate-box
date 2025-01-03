@@ -16,6 +16,11 @@ function setInnerText(id, text) {
 function removeClass(id, className) {
  document.getElementById(id).classList.remove(className);
 }
+
+// function for add class
+function addClass(id, className) {
+ document.getElementById(id).classList.add(className);
+}
 // title hunter 
 function titleHunter(id) {
  return document.getElementById(id).innerText
@@ -33,6 +38,10 @@ function mainTask(id) {
   setInnerText("balance", newBalance)
   setInnerText(id + "-balance", newdonationAmount);
   const donationTitle = titleHunter(id + "-title")
+
+  // Modal
+  document.getElementById("my_modal_5").showModal()
+
 
   // date and time
   // Create a new Date object
@@ -61,7 +70,7 @@ function mainTask(id) {
 
 
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-3 rounded-md border-l-2 border-indigo-500"
+  historyItem.className = "bg-white p-3 rounded-md border-l-2 border-lime-300"
 
   historyItem.innerHTML = `
   
@@ -70,7 +79,7 @@ function mainTask(id) {
  `
   const historyContainer = document.getElementById("history-list");
   historyContainer.insertBefore(historyItem, historyContainer.firstChild)
-  removeClass("history-section", "hidden")
+
  })
 }
 
@@ -78,3 +87,19 @@ mainTask("shahid")
 mainTask("gaza")
 mainTask("flood")
 mainTask("cloth")
+
+// History button
+document.getElementById("history-button").addEventListener("click", function () {
+ removeClass("history-section", "hidden")
+ removeClass("donation-button", "bg-lime-300")
+
+ addClass("donation-section", "hidden")
+ addClass("history-button", "bg-lime-300")
+})
+// donation button
+document.getElementById("donation-button").addEventListener("click", function () {
+ addClass("history-section", "hidden")
+ removeClass("donation-section", "hidden")
+ removeClass("history-button", "bg-lime-300")
+ addClass("donation-button", "bg-lime-300")
+})
