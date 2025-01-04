@@ -25,7 +25,6 @@ function addClass(id, className) {
 function titleHunter(id) {
   return document.getElementById(id).innerText
 }
-
 function mainTask(id) {
   document.getElementById(id + "-button").addEventListener("click", function (event) {
     event.preventDefault()
@@ -38,17 +37,15 @@ function mainTask(id) {
     if (donationInput <= 0 || balance < 0 || newBalance < 0 || donationInput.toString() === "NaN") {
       alert("Invalid Donation Amount")
     } else {
+
       setInnerText("balance", newBalance)
       setInnerText(id + "-balance", newdonationAmount);
       const donationTitle = titleHunter(id + "-title")
       // Modal
       document.getElementById("my_modal_5").showModal()
-
+      addClass("history-title", "hidden")
       // date and time
-
       const now = new Date();
-
-
       const options = {
         weekday: "short",
         year: "numeric",
@@ -60,14 +57,8 @@ function mainTask(id) {
         timeZoneName: "short"
       };
       const formattedDate = new Intl.DateTimeFormat("en-US", options).format(now);
-
-      // Adding the "Bangladesh Standard Time" manually
       const timezoneName = "Bangladesh Standard Time";
-
-      // Combine everything
       const result = `Date : ${formattedDate} (${timezoneName})`;
-
-
       const historyItem = document.createElement("div");
       historyItem.className = "bg-white p-3 rounded-md border-l-2 border-lime-300"
 
@@ -79,17 +70,8 @@ function mainTask(id) {
       const historyContainer = document.getElementById("history-list");
       historyContainer.insertBefore(historyItem, historyContainer.firstChild)
     }
-
-
-
-
-
-
-
-
   })
 }
-
 mainTask("shahid")
 mainTask("gaza")
 mainTask("flood")
